@@ -1,0 +1,31 @@
+{
+    "name": "circlum",
+    "version": "1.0.0",
+    "description": "",
+    "main": "gulpfile.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SvitlanaTsupryk-jul18/JSBand"
+    },
+    "author": "Svet",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/SvitlanaTsupryk-jul18/JSBand/issues"
+    },
+    "homepage": "https://github.com/SvitlanaTsupryk-jul18/JSBand#readme",
+    "devDependencies": {
+        "@babel/core": "^7.6.4",
+        "@babel/preset-env": "^7.6.3",
+        "browser-sync": "^2.26.3",
+        "gulp": "^3.9.1",
+        "gulp-autoprefixer": "^6.0.0",
+        "gulp-babel": "^8.0.0-beta.2",
+        "gulp-sass": "^4.0.2"
+    },
+    "dependencies": {
+        "normalize.css": "^8.0.1"
+    }
+}

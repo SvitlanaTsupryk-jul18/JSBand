@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Description" content="This is test page demonstrates my abilities in HTML, CSS, JS">
+    <title>JS band</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel='stylesheet'
+        href='https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>TODOList</h1>
+    </header>
+    <div class="wrapper">
+        <div class="root">
+        </div>
+        <template id="template">
+            <div class="todo">
+                <div class="todo__inner">
+                    <h3 class="todo__title"></h3>
+                    <p class="todo__description"></p>
+                    <div class="todo__priority"></div>
+                    <button type="button" class="buy">Buy</button>
+                </div>
+            </div>
+        </template>
+        <button type="button" class="btn-create">Create</button>
+        <div class="modal">
+            <div class="new">
+                <input type="text" class="new__title" placeholder="Title" />
+                <input type="text" class="new__description" placeholder="Description" />
+                <select name="priority" class="new__priority">
+                    <option name="high" value="high">high</option>
+                    <option name="normal" value="normal">normal</option>
+                    <option name="low" value="low">low</option>
+                </select>
+                <div class="modal__buttons">
+                    <button type="button" class="cancel" name="cancel">cancel</button>
+                    <button type="button" class="save" name="save">save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+
+    </footer>
+
+    <script src="script.js " defer></script>
+
+</body>
+
+</html>
