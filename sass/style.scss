@@ -50,17 +50,19 @@ body {
 }
 
 .todo {
-  &__change:hover .todo__buttons {
-    background-color: orangered;
-    // opacity: 1;
+  &__change:hover.todo__buttons {
+    color: orangered;
+    height: 200px;
+    opacity: 1;
     // visibility: visible;
   }
   &__buttons {
-    background-color: blue;
-    // opacity: 0;
+    color: blue;
+    height: 100px;
+    opacity: 0;
     // visibility: hidden;
   }
 }
-.todo__change:hover .todo__buttons {
+.todo__change:hover div.todo__buttons {
   background-color: orangered;
 }

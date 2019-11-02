@@ -13,30 +13,51 @@
     let flagEdit = false;
     let currentId;
 
+    const showModal = () => {
+      modal.classList.add("show");
+    };
+
+    const closeModal = e => {
+      modal.classList.remove("show");
+      if (e.target.name === "save") {
+        if (flagEdit) {
+          editTodo(currentId);
+        } else {
+          addTodo();
+        }
+      }
+      flagEdit = false;
+    };
+
+    modalbtn.addEventListener("click", showModal);
+    buttons.addEventListener("click", e => {
+      closeModal(e);
+    });
+
     const createTodo = item => {
       const todo = document.createElement("div");
       todo.classList.add("todo");
       const title = document.createElement("h3");
       title.classList.add("todo__title");
       const description = document.createElement("p");
-      description.classList.add(".todo__description");
+      description.classList.add("todo__description");
       const priority = document.createElement("div");
-      priority.classList.add(".todo__priority");
+      priority.classList.add("todo__priority");
       const btn = document.createElement("button");
-      btn.classList.add(".todo__change");
+      btn.classList.add("todo__change");
       btn.innerHTML = "...";
       const buttonsWrapper = document.createElement("div");
-      buttons.classList.add(".todo__buttons");
+      buttonsWrapper.classList.add("todo__buttons");
       const editBtn = document.createElement("button");
-      editBtn.classList.add(".edit");
+      editBtn.classList.add("edit");
       editBtn.value = "edit";
       editBtn.innerHTML = "edit";
       const doneBtn = document.createElement("button");
-      doneBtn.classList.add(".open");
+      doneBtn.classList.add("open");
       doneBtn.value = "done";
       doneBtn.innerHTML = "done";
       const deleteBtn = document.createElement("button");
-      deleteBtn.classList.add(".delete");
+      deleteBtn.classList.add("delete");
       deleteBtn.value = "delete";
       deleteBtn.innerHTML = "delete";
       buttonsWrapper.append(editBtn);
@@ -66,12 +87,11 @@
         currentId = +e.target.parentElement.parentElement.dataset.id;
         e.target.parentElement.parentElement.classList.toggle("done");
 
-        todoList.map(todo => {
+        todoList.forEach(todo => {
           if (todo.id === currentId) {
             todo.open = !todo.open;
           }
         });
-
         sessionStorage.setItem("todos", JSON.stringify(todoList));
       });
 
@@ -85,6 +105,14 @@
           : (descriptionNew.value = "");
         select.value = item.priority;
         flagEdit = true;
+      });
+
+      deleteBtn.addEventListener("click", e => {
+        currentId = +e.target.parentElement.parentElement.dataset.id;
+        e.target.parentElement.parentElement.remove();
+
+        todoList = [...todoList].filter(todo => todo.id !== currentId);
+        sessionStorage.setItem("todos", JSON.stringify(todoList));
       });
     };
 
@@ -102,7 +130,7 @@
     };
 
     const editTodo = id => {
-      todoList.map(todo => {
+      todoList.forEach(todo => {
         if (todo.id === currentId) {
           todo.title = titleNew.value;
           todo.description = descriptionNew.value;
@@ -123,27 +151,6 @@
         createTodo(item);
       });
     }
-
-    const showModal = () => {
-      modal.classList.add("show");
-    };
-
-    const closeModal = e => {
-      modal.classList.remove("show");
-      if (e.target.name === "save") {
-        if (flagEdit) {
-          editTodo(currentId);
-        } else {
-          addTodo();
-        }
-      }
-      flagEdit = false;
-    };
-
-    modalbtn.addEventListener("click", showModal);
-    buttons.addEventListener("click", e => {
-      closeModal(e);
-    });
   };
 
   ///invocations
