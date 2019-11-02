@@ -24,6 +24,7 @@ body {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   display: flex;
+  display: none;
   justify-content: center;
   align-items: center; }
 
@@ -35,3 +36,15 @@ body {
 
 .show {
   display: flex; }
+
+.done {
+  background-color: orange; }
+
+.todo__change:hover .todo__buttons {
+  background-color: orangered; }
+
+.todo__buttons {
+  background-color: blue; }
+
+.todo__change:hover .todo__buttons {
+  background-color: orangered; }
