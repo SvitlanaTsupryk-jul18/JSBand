@@ -49,20 +49,16 @@ body {
   background-color: orange;
 }
 
-.todo {
-  &__change:hover.todo__buttons {
-    color: orangered;
-    height: 200px;
-    opacity: 1;
-    // visibility: visible;
-  }
-  &__buttons {
-    color: blue;
-    height: 100px;
-    opacity: 0;
-    // visibility: hidden;
-  }
-}
-.todo__change:hover div.todo__buttons {
-  background-color: orangered;
-}
+// .todo {
+//   &__change:hover + .todo__buttons {
+//     opacity: 1;
+//     visibility: visible;
+//     transform: translateY(0px);
+//   }
+//   &__buttons {
+//     opacity: 0;
+//     transform: translateY(-10px);
+//     visibility: hidden;
+//     transition: all 0.3s ease-in;
+//   }
+// }

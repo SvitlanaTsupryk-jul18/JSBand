@@ -39,16 +39,3 @@ body {
 
 .done {
   background-color: orange; }
-
-.todo__change:hover.todo__buttons {
-  color: orangered;
-  height: 200px;
-  opacity: 1; }
-
-.todo__buttons {
-  color: blue;
-  height: 100px;
-  opacity: 0; }
-
-.todo__change:hover div.todo__buttons {
-  background-color: orangered; }

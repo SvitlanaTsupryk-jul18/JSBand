@@ -19,10 +19,25 @@
         <h1>TODOList</h1>
     </header>
     <div class="wrapper">
+        <div class="search">
+            <input type="text" class="search__title" placeholder="Search by title" />
+            <select name="priorityFilter" class="search__done">
+                <option name="all" value="all">all</option>
+                <option name="done" value="true">done</option>
+                <option name="open" value="">open</option>
+            </select>
+            <select name="priority" class="search__priority">
+                <option name="all" value="all">all</option>
+                <option name="high" value="high">high</option>
+                <option name="normal" value="normal">normal</option>
+                <option name="low" value="low">low</option>
+            </select>
+            <button type="button" class="btn-create">Create</button>
+        </div>
+
         <div class="root">
         </div>
 
-        <button type="button" class="btn-create">Create</button>
         <div class="modal">
             <div class="new">
                 <input type="text" class="new__title" placeholder="Title" />
