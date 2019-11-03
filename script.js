@@ -59,7 +59,6 @@
         if (filterPriority === "all") {
           return todo;
         } else {
-          console.log("priorstart", item.ptiority, filterPriority);
           if (item.priority === filterPriority) {
             return todo;
           } else return "";
@@ -69,9 +68,7 @@
       if (uncompleted === "all") {
         return filtered(todo, item);
       } else {
-        console.log(item.open, uncompleted);
         if (item.open === uncompleted) {
-          console.log(item.open, uncompleted);
           return filtered(todo, item);
         } else return "";
       }
@@ -161,6 +158,10 @@
           console.log(todoList);
         });
 
+        btns.addEventListener("click", e => {
+          e.target.nextSibling.classList.toggle("showing");
+        });
+
         showTodo(todo);
       }
     };
@@ -217,14 +218,6 @@
       root.innerHTML = "";
       createTodo(todoList);
     });
-    // const changeButtons = document.querySelectorAll(".todo__buttons");
-    // [...changeButtons].forEach(el => {
-    //   el.addEventListener("click", e => {
-    //     // buttonsWrapper.classList.toggle("show");
-    //     console.log(e);
-    //   });
-    //   console.log(el);
-    // });
   };
 
   ///invocations
