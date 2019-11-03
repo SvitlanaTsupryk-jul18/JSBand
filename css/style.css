@@ -7,9 +7,11 @@
 
 body {
   font-weight: 400;
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
   background: linear-gradient(#fcfc4c, transparent), linear-gradient(to top, #40f740, transparent);
-  font-family: Roboto, sans-serif; }
+  font-family: Roboto, sans-serif;
+  padding-bottom: 30px; }
 
 .wrapper {
   max-width: 1140px;
@@ -114,4 +116,7 @@ select {
 .footer {
   font-weight: bold;
   padding: 10px;
-  border-top: 1px solid #000; }
+  border-top: 1px solid #000;
+  position: absolute;
+  width: 100%;
+  bottom: 0; }

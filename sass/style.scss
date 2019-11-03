@@ -8,10 +8,12 @@
 
 body {
   font-weight: 400;
-  height: 100vh;
+  min-height: 100vh;
+  position: relative;
   background: linear-gradient(rgb(252, 252, 76), transparent),
     linear-gradient(to top, rgb(64, 247, 64), transparent);
   font-family: Roboto, sans-serif;
+  padding-bottom: 30px;
 }
 
 .wrapper {
@@ -138,4 +140,7 @@ select {
   font-weight: bold;
   padding: 10px;
   border-top: 1px solid #000;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
